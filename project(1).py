@@ -19,16 +19,22 @@ custom_html = """
 """
 
 st.components.v1.html(custom_html)
-
+## Headers
 st.title("Fun, detailed Weather App!")
 st.header(":violet[The end of clunky weather apps with the fun and easy to use weather app!]")
 st.subheader(":blue[Made by: Rayhaan Khan]")
+## for the documentation
+url = "https://countrycode.org/"
+st.write("For finding country codes visit: [🔘](%s)" % url)
+
+
+
 g = st.checkbox("Visibility 👀")
 h = st.checkbox("Location coordinates 🌎 🗼 ")
 u = st.checkbox("Forecast")
-i = st.checkbox("Wind Speed 💨💨")
+i = st.checkbox("Wind Speed 💨")
 def main():
-    z = st.text_input("city:    *For locations in multiple countries, eg: Cambridge. Add country code, eg: Cambridge, US")
+    z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
     city()
     make_url(z)
     export
@@ -57,7 +63,7 @@ def make_url(z):
                 humid = data['main']['humidity']
                 wind = data['wind']
                 if i:
-                     st.text(f'Wind speed is: {wind}💨 ')
+                     st.text(f'Wind speed is: {wind} 💨')
                 st.text(f'Temperature: ~{temp} °C 🌡️')
                 st.text(f"Humidy is: {humid}% 🏝️")
 
@@ -88,7 +94,7 @@ def make_url(z):
                 if desc == 'overcast clouds':
                      st.markdown(f':green[**Description: {desc} ⛈️**]')
                 else:
-                     st.markdown(f':green[**Detailed Description: {desc}**]')
+                     st.markdown(f':green[**Description: {desc}**]')
 
                 #check box things
                 if g:
