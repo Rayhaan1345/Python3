@@ -88,7 +88,7 @@ def make_url(z):
                 if desc == 'overcast clouds':
                      st.markdown(f':green[**Description: {desc} ⛈️**]')
                 else:
-                     st.markdown(f':green[**Description: {desc}**]')
+                     st.markdown(f':green[**Detailed Description: {desc}**]')
 
                 #check box things
                 if g:
