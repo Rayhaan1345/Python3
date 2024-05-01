@@ -26,6 +26,7 @@ st.subheader(":blue[Made by: Rayhaan Khan]")
 g = st.checkbox("Visibility 👀")
 h = st.checkbox("Location coordinates 🌎 🗼 ")
 u = st.checkbox("Forecast")
+i = st.checkbox("Wind Speed")
 def main():
     z = st.text_input("city: ")
     city()
@@ -54,6 +55,9 @@ def make_url(z):
                 vis = data['visibility']
                 coord = data['coord']
                 humid = data['main']['humidity']
+                wind = data['wind']
+                if i:
+                     st.text(f'Wind speed is: {wind} ')
                 st.text(f'Temperature: ~{temp} °C 🌡️')
                 st.text(f"Humidy is: {humid}% 🏝️")
 
@@ -81,8 +85,6 @@ def make_url(z):
                      st.markdown(f':green[**Description: {desc} ⛈️**]')
                 if desc == 'light rain':
                      st.markdown(f':green[**Description: {desc} 🌧️**]')
-                if desc == 'overcast clouds':
-                    st.markdown(f':green[**Description: {desc} ⛈️**]')
                 else:
                      st.markdown(f':green[**Description: {desc}**]')
 
