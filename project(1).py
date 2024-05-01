@@ -85,6 +85,8 @@ def make_url(z):
                      st.markdown(f':green[**Description: {desc} ⛈️**]')
                 if desc == 'light rain':
                      st.markdown(f':green[**Description: {desc} 🌧️**]')
+                if desc == 'overcast clouds':
+                     st.markdown(f':green[**Description: {desc} ⛈️**]')
                 else:
                      st.markdown(f':green[**Description: {desc}**]')
 
