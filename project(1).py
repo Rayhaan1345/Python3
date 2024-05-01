@@ -1,25 +1,51 @@
 import requests
 import streamlit as st
-
 # api key = 867a0216a489131cfa37409ca09cfc2e
-st.title("Fun weather app!")
+custom_html = """
+<div class="banner">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2jjYufn5KY4HF_-p7PnDGDu0x6h7siQ3a_utKvqk&s" alt="Banner Image">
+</div>
+<style>
+    .banner {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+    .banner img {
+        width: 98%;
+        object-fit: cover;
+    }
+</style>
+"""
+
+st.components.v1.html(custom_html)
+
+st.title("Fun, detailed Weather App!")
+st.header(":violet[The end of clunky weather apps with the fun and easy to use weather app!]")
+st.subheader(":blue[Made by: Rayhaan Khan]")
+g = st.checkbox("Visibility 👀")
+h = st.checkbox("Location coordinates 🌎 🗼 ")
+u = st.checkbox("Forecast")
 def main():
-    z = input("city: ")
+    z = st.text_input("city: ")
     city()
     make_url(z)
     export
 
 
 
+
 def city():
-    z = input("enter the location (more detail): ")
+    z = st.text_input("enter the location (more detail)(optional): ")
     return z
 
 def make_url(z):
     ip = f'http://api.openweathermap.org/data/2.5/weather?q={z}&appid=867a0216a489131cfa37409ca09cfc2e'
-    print(ip)
+    zt = f'https://api.openweathermap.org/data/2.5/forecast?q={z}&appid=867a0216a489131cfa37409ca09cfc2e'
     response = requests.get(ip)
+    meow = requests.get(zt)
     if response.status_code == 200:
+                #current
                 data = response.json()
                 temp = data['main']['temp']
                 temp = temp -273
@@ -27,14 +53,47 @@ def make_url(z):
                 desc = data['weather'][0]['description']
                 vis = data['visibility']
                 coord = data['coord']
-                print(f'Temperature: ~{temp} °C')
-                print(f'Description: {desc}')
-                print(f'Visibility is ~{vis} metres')
-                print(f"The co-ordinates of the weather station are: {coord}. Search them up to see the location of monitoring systems!")
+                humid = data['main']['humidity']
+                st.text(f'Temperature: ~{temp} °C 🌡️')
+                st.text(f"Humidy is: {humid}% 🏝️")
+
+                st.text("The web address for the data: " + ip)
+                #forecast
+                #blah = meow.json()
+                #forecast_temp = blah['2024-05-01 12:00:00']['temp']
+                #forecast_temp = forecast_temp -273
+                #forecast_temp = round(forecast_temp)
+                #if u:
+                   # st.text(f"The expected average temperature for the next 40 days: {forecast_temp}")#
+
+
+                #Emoji thingie
+
+                if desc == 'clear sky':
+                     st.markdown(f':green[**Description: {desc} 🌤️**]')
+                if desc == 'mist':
+                     st.markdown(f':green[**Description: {desc} 🌫️**]')
+                if desc == 'smoke':
+                     st.markdown(f':green[**Description: {desc} 😶‍🌫️**]')
+                if desc == 'broken clouds':
+                     st.markdown(f":green[**Description: {desc} 🌥️**]")
+                if desc == 'scattered clouds':
+                     st.markdown(f':green[**Description: {desc} ⛈️**]')
+                if desc == 'light rain':
+                     st.markdown(f':green[**Description: {desc} 🌧️**]')
+                else:
+                     st.markdown(f':green[**Description: {desc}**]')
+
+                #check box things
+                if g:
+                    st.text(f' 👀 Visibility is ~{vis} metres')
+                if h:
+                    st.text(f" 🌎 The co-ordinates of the weather station are: {coord}. Search them up to see the location of monitoring systems!")
     else:
-        print('Error fetching weather data')
+        st.markdown(" **:red[Error fetching weather data. Maybe you were too specific?]**")
+
 
 def export():
-      print(make_url)
+      st.text(make_url)
 
 main()
