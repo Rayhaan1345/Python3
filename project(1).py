@@ -10,7 +10,7 @@ st.markdown(
     <style>
     header[data-testid="stHeader"]{
         background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2jjYufn5KY4HF_-p7PnDGDu0x6h7siQ3a_utKvqk&s);
-        background-size: contain;
+
         height: 30%;
     }
     </style>""",
