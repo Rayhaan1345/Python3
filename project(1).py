@@ -1,5 +1,6 @@
 import requests
 import streamlit as st
+import components
 # api key = 867a0216a489131cfa37409ca09cfc2e
 custom_html = """
 <div class="banner">
