@@ -2,25 +2,28 @@ import requests
 import streamlit as st
 import components
 # api key = 867a0216a489131cfa37409ca09cfc2e
-custom_html = """
- st.markdown(
-            """
-            <style>
-            header[data-testid="stHeader"]{
-                background-image: url(https://placekitten.com/g/100/46);
-                background-repeat: repeat;
-                background-size: contain;
-                height: 10%;
-            }
-        
-            section[data-testid="stSidebar"] {
-                top: 10%; 
-              }
-            </style>""",
-            unsafe_allow_html=True,
-        )
+import streamlit as st
 
-st.components.v1.html(custom_html)
+st.title(":cat: Site")
+st.sidebar.info("Show the sidebar")
+
+## Add background image
+st.markdown(
+    """
+    <style>
+    header[data-testid="stHeader"]{
+        background-image: url(https://placekitten.com/g/100/46);
+        background-repeat: repeat;
+        background-size: contain;
+        height: 10%;
+    }
+    
+    section[data-testid="stSidebar"] {
+        top: 10%; 
+      }
+    </style>""",
+    unsafe_allow_html=True,
+)
 ## Headers
 st.title("Fun, detailed Weather App!")
 st.header(":violet[The end of clunky weather apps with the fun and easy to use weather app!]")
