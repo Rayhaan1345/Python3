@@ -2,10 +2,7 @@ import requests
 import streamlit as st
 import components
 # api key = 867a0216a489131cfa37409ca09cfc2e
-import streamlit as st
 
-st.title(":cat: Site")
-st.sidebar.info("Show the sidebar")
 
 ## Add background image
 st.markdown(
@@ -14,7 +11,7 @@ st.markdown(
     header[data-testid="stHeader"]{
         background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2jjYufn5KY4HF_-p7PnDGDu0x6h7siQ3a_utKvqk&s);
         background-size: contain;
-        height: 40%;
+        height: 30%;
     }
     </style>""",
     unsafe_allow_html=True,
