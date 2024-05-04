@@ -13,14 +13,9 @@ st.markdown(
     <style>
     header[data-testid="stHeader"]{
         background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2jjYufn5KY4HF_-p7PnDGDu0x6h7siQ3a_utKvqk&s);
-        background-repeat: repeat;
         background-size: contain;
-        height: 10%;
+        height: 40%;
     }
-    
-    section[data-testid="stSidebar"] {
-        top: 10%; 
-      }
     </style>""",
     unsafe_allow_html=True,
 )
