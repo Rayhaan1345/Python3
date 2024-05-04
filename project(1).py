@@ -3,22 +3,22 @@ import streamlit as st
 import components
 # api key = 867a0216a489131cfa37409ca09cfc2e
 custom_html = """
-st.markdown(
-    """
-    <style>
-    header[data-testid="stHeader"]{
-        background-image: url(https://placekitten.com/g/100/46);
-        background-repeat: repeat;
-        background-size: contain;
-        height: 10%;
-    }
-    
-    section[data-testid="stSidebar"] {
-        top: 10%; 
-      }
-    </style>""",
-    unsafe_allow_html=True,
-)
+ st.markdown(
+            """
+            <style>
+            header[data-testid="stHeader"]{
+                background-image: url(https://placekitten.com/g/100/46);
+                background-repeat: repeat;
+                background-size: contain;
+                height: 10%;
+            }
+        
+            section[data-testid="stSidebar"] {
+                top: 10%; 
+              }
+            </style>""",
+            unsafe_allow_html=True,
+        )
 
 st.components.v1.html(custom_html)
 ## Headers
