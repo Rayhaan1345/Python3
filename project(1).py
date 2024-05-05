@@ -38,7 +38,7 @@ i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
     if not z.startswith("a"):
-        st.text('enter country code a')
+        st.markdown("inv")
     city()
     make_url(z)
     export
@@ -47,8 +47,8 @@ def main():
 
 
 def city():
-    z = st.text_input("enter the location (more detail)(optional): ")
-    return z
+    t = st.text_input("enter the location (more detail)(optional): ")
+    return t
 
 def make_url(z):
     ip = f'http://api.openweathermap.org/data/2.5/weather?q={z}&appid=867a0216a489131cfa37409ca09cfc2e'
