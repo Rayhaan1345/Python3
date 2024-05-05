@@ -51,6 +51,7 @@ def prompt5():
     if not city_name.startswith('a'):
         # st.session_state["disp_msg"] = "Enter a valid city name starting with a"
         st.session_state["num_tries"] -= 1
+        st.info(st.session_state["num_tries"])
         if st.session_state["num_tries"] == 0:
             sys.exit()
         
