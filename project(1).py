@@ -45,7 +45,8 @@ def main():
             if not z.startswith('a'):
                 op -= 1
         if op == 0:
-            sys.exit("broke")
+            st.markdown('code is broken')
+            sys.exit()
     city()
     make_url(z)
     export
