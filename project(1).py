@@ -37,14 +37,14 @@ h = st.checkbox("Location coordinates 🌎 🗼 ")
 u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
-    z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+    z = st.text_input("city: (please enter country code for places with same name in multiple regions)")
     op = 5
     if not z .startswith('a'):
         
         while op > 0:
-            q = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+            q = st.text_input("city: (please enter country code for places with same name in multiple regionsUS)")
             if not q.startswith('a'):
-                q = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+                q = st.text_input("city: (please enter country code for places with same name in multiple regi, US)")
         op -= 1
             
     if op == 0:
