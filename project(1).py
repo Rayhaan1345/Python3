@@ -41,11 +41,11 @@ def main():
     if not z.startswith('a'):
         op = 5
         while op > 0:
-            s = st.text_input("mmm no no, try again")
-            if not s.startswith('a'):
+            z = st.text_input("mmm no no, try again")
+            if not z.startswith('a'):
                 op -= 1
                 if op = 0:
-                sys.exit
+                sys.exit()
     city()
     make_url(z)
     export
