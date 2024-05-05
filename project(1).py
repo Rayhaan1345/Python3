@@ -39,7 +39,7 @@ def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
     if not z.startswith("a"):
         st.markdown('enter country starts with a')
-        break
+        break()
         
     city()
     make_url(z)
