@@ -43,7 +43,9 @@ def main():
         
         while op > 0:
             if not z.startswith('a'):
-                op -= 1
+                z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+        op -= 1
+            
     if op == 0:
         st.markdown('code is broken')
         sys.exit()
