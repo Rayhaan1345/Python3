@@ -38,7 +38,7 @@ u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions)", key="main_input", value=None)
-    if z is not None:
+    if z is not None and not z.startswith('a'):
         prompt5(z)
     city()
     make_url(z)
