@@ -44,8 +44,8 @@ def main():
         while op > 0:
             if not z.startswith('a'):
                 op -= 1
-                if op == 0:
-                    sys.exit("broke")
+        if op == 0:
+            sys.exit("broke")
     city()
     make_url(z)
     export
