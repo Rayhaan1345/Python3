@@ -133,5 +133,6 @@ def make_url(z):
 def export():
       st.text(make_url)
 
-global num_tries = 3
+global num_tries
+num_tries = 3
 main()
