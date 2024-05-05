@@ -38,8 +38,9 @@ u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+    op = 5
     if not z.startswith('a'):
-        op = 5
+        
         while op > 0:
             z = st.text_input("mmm no no, try again")
             if not z.startswith('a'):
