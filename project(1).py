@@ -41,8 +41,9 @@ def main():
     if not z.startswith('a'):
         op = 5
         while op > 0:
-            st.markdown("mmm no no")
-            op -= 1
+            s = st.text_input("mmm no no, try again")
+            if not s.startswith('a'):
+                op -= 1
     city()
     make_url(z)
     export
