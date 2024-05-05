@@ -3,4 +3,3 @@ pyowm
 streamlit
 components
 
-sys
