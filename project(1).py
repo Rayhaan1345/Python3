@@ -37,9 +37,8 @@ h = st.checkbox("Location coordinates 🌎 🗼 ")
 u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
-    z = st.text_input("city: (please enter country code for places with same name in multiple regions)")
-    st.markdown(z)
-    if not z.startswith('a'):
+    z = st.text_input("city: (please enter country code for places with same name in multiple regions)", key="main_input", value=None)
+    if z is not None:
         prompt5(z)
     city()
     make_url(z)
