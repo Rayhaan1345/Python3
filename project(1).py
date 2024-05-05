@@ -42,7 +42,6 @@ def main():
     if not z.startswith('a'):
         
         while op > 0:
-            z = st.text_input("mmm no no, try again")
             if not z.startswith('a'):
                 op -= 1
                 if op == 0:
