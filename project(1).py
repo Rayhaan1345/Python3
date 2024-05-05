@@ -37,14 +37,17 @@ h = st.checkbox("Location coordinates 🌎 🗼 ")
 u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
-    city_name = st.text_input("city: (please enter country code for places with same name in multiple regions)", key="main_input", value="Rayh") #on_change=prompt5)
-    st.info(st.session_state["main_input"])
-    # if city_name is not None and not city_name.startswith('a'):
-    #     prompt5(city_name)
+    city_name_key = "city_name_input"
+    city_name = st.text_input("city: (please enter country code for places with same name in multiple regions)", key=city_name_key, value=None, on_change=prompt5(city_name_key))
+
     city()
     make_url(city_name)
     export
 
+def prompt5(city_name_key):
+    city_name = st.session_state[city_name_key]
+    if not city_name.startswith('a'):
+        st.info("input again")
 # def prompt5(city_name):
 #     op = 5
 #     while op > 0:
