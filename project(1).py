@@ -45,8 +45,9 @@ def main():
     export
 
 def blah():
+    
     op = 5
-        while op > 0:
+    while op > 0:
             q = st.text_input("city: (please enter country code for places with same name in multiple regionsUS)")
             if not q.startswith('a'):
                 q = st.text_input("city: (please enter country code for places with same name in multiple regi, US)")
