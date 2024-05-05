@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
 import streamlit.components.v1 as components
+
 # api key = 867a0216a489131cfa37409ca09cfc2e
 # custom_html = """
 # <div class="banner">
@@ -36,6 +37,9 @@ u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+    if not [0] in z == "a":
+        print("enter country start with a")
+        
     city()
     make_url(z)
     export
