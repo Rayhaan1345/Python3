@@ -38,23 +38,26 @@ u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions)")
-    op = 5
-    if not z .startswith('a'):
-        
-        while op > 0:
-            q = st.text_input("city: (please enter country code for places with same name in multiple regionsUS)")
-            if not q.startswith('a'):
-                q = st.text_input("city: (please enter country code for places with same name in multiple regi, US)")
-        op -= 1
-            
-    if op == 0:
-        st.markdown('code is broken')
-        sys.exit()
+    if not z.startswith('a'):
+        blah(z)
     city()
     make_url(z)
     export
 
+def blah():
+    op = 5
+        while op > 0:
+            q = st.text_input("city: (please enter country code for places with same name in multiple regionsUS)")
+            if not q.startswith('a'):
+                q = st.text_input("city: (please enter country code for places with same name in multiple regi, US)")
+                op -= 1
+                if q.startswith('a'):
+                    sys.exit()
 
+        if op == 0:
+            st.markdown("e")
+            sys.exit()
+    
 
 
 def city():
