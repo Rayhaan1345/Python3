@@ -47,6 +47,8 @@ def main():
                 return op
                 if op == 0:
                     sys.exit()
+            except ValueError:
+                sys.exit
                 
     city()
     make_url(z)
