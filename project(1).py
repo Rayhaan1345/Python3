@@ -46,7 +46,7 @@ def main():
             if not z.startswith('a'):
                 op -= 1
                 if op == 0:
-                sys.exit()
+                    sys.exit()
     city()
     make_url(z)
     export
