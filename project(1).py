@@ -50,11 +50,7 @@ def blah():
     while op > 0:
             z = st.text_input("city: (please enter country code for places with same name in multiple regionsUS)", key="meow")
             if not z.startswith('a'):
-                z = st.text_input("city: (please enter country code for places with same name in multiple regi, US)", key="hoho")
                 op -= 1
-                if z.startswith('a'):
-                    sys.exit()
-
     if op == 0:
         
         st.markdown("e")
