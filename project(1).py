@@ -2,22 +2,22 @@ import requests
 import streamlit as st
 import streamlit.components.v1 as components
 # api key = 867a0216a489131cfa37409ca09cfc2e
-custom_html = """
-<div class="banner">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2jjYufn5KY4HF_-p7PnDGDu0x6h7siQ3a_utKvqk&s" alt="Banner Image">
-</div>
-<style>
-    .banner {
-        width: 100%;
-        height: 250px;
-        overflow: hidden;
-    }
-    .banner img {
-        width: 98%;
-        object-fit: cover;
-    }
-</style>
-"""
+# custom_html = """
+# <div class="banner">
+#     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2jjYufn5KY4HF_-p7PnDGDu0x6h7siQ3a_utKvqk&s" alt="Banner Image">
+# </div>
+# <style>
+#     .banner {
+#         width: 100%;
+#         height: 250px;
+#         overflow: hidden;
+#     }
+#     .banner img {
+#         width: 98%;
+#         object-fit: cover;
+#     }
+# </style>
+# """
 
 components.iframe("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN2jjYufn5KY4HF_-p7PnDGDu0x6h7siQ3a_utKvqk&s", height=150)
 ## Headers
