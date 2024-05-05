@@ -52,7 +52,7 @@ def prompt5():
         global num_tries
         num_tries = num_tries - 1
         st.info(city_name)
-        st.info(st.session_state["num_tries"])
+        st.info(num_tries)
         if num_tries == 0:
             sys.exit()
         
