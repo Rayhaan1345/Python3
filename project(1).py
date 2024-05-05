@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
 import sys
+import time
 import streamlit.components.v1 as components
 
 # api key = 867a0216a489131cfa37409ca09cfc2e
@@ -48,6 +49,8 @@ def prompt5():
     city_name = st.session_state["city_name_input"]
     if not city_name.startswith('a'):
         st.info("input again")
+        time.sleep(5)
+        
 # def prompt5(city_name):
 #     op = 5
 #     while op > 0:
