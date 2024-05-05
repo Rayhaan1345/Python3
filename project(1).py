@@ -39,11 +39,12 @@ i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
     op = 5
-    if not z.startswith('a'):
+    if not z .startswith('a'):
         
         while op > 0:
-            if not z.startswith('a'):
-                z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+            q = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
+            if not q.startswith('a'):
+                q = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
         op -= 1
             
     if op == 0:
