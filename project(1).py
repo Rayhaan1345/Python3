@@ -48,6 +48,7 @@ def main():
 
 def prompt5():
     city_name = st.session_state["city_name_input"]
+    st.info(city_name)
     if not city_name.startswith('a'):
         # st.session_state["disp_msg"] = "Enter a valid city name starting with a"
         st.session_state["num_tries"] -= 1
