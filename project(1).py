@@ -49,10 +49,10 @@ def prompt5():
     city_name = st.session_state["city_name_input"]
     if not city_name.startswith('a'):
         # st.session_state["disp_msg"] = "Enter a valid city name starting with a"
-        st.session_state["num_tries"] = st.session_state["num_tries"] - 1
+        num_tries = num_tries - 1
         st.info(city_name)
         st.info(st.session_state["num_tries"])
-        if st.session_state["num_tries"] == 0:
+        if num_tries == 0:
             sys.exit()
         
 # def prompt5(city_name):
@@ -133,5 +133,5 @@ def make_url(z):
 def export():
       st.text(make_url)
 
-st.session_state["num_tries"] = 3
+global num_tries = 3
 main()
