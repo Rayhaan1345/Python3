@@ -39,9 +39,9 @@ u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
     city_name_key = "city_name_input"
-    st.session_state["num_tries"] = 5
+    st.session_state["num_tries"] = 3
     city_name = st.text_input("city: (please enter country code for places with same name in multiple regions)", key=city_name_key, value=None, on_change=prompt5)
-    st.text("", key="disp_msg")
+    # st.text("", key="disp_msg")
     city()
     make_url(city_name)
     export
@@ -49,7 +49,7 @@ def main():
 def prompt5():
     city_name = st.session_state["city_name_input"]
     if not city_name.startswith('a'):
-        st.session_state["disp_msg"] = "Enter a valid city name starting with a"
+        # st.session_state["disp_msg"] = "Enter a valid city name starting with a"
         st.session_state["num_tries"] -= 1
         if st.session_state["num_tries"] == 0:
             sys.exit()
