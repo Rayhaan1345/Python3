@@ -38,7 +38,7 @@ h = st.checkbox("Location coordinates 🌎 🗼 ")
 u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
-    
+    city_name_key = "city_name_input"
     city_name = st.text_input("city: (please enter country code for places with same name in multiple regions)", key=city_name_key, value=None, on_change=prompt5)
     # st.text("", key="disp_msg")
     city()
