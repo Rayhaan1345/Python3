@@ -44,8 +44,8 @@ def main():
     make_url(city_name)
     export
 
-def prompt5(key):
-    city_name = st.session_state[key]
+def prompt5():
+    city_name = st.session_state.city_name_key
     if not city_name.startswith('a'):
         st.info("input again")
 # def prompt5(city_name):
