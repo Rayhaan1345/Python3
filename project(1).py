@@ -48,7 +48,7 @@ def main():
 def prompt5():
     city_name = st.session_state["city_name_input"]
     if not city_name.startswith('a'):
-        st.info("input again")
+        st.markdown("input again")
         time.sleep(5)
         
 # def prompt5(city_name):
