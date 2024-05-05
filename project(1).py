@@ -38,7 +38,8 @@ i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions eg: Cambridge, US)")
     if not z.startswith("a"):
-        st.markdown("inv")
+        raise StopExecution
+        
     city()
     make_url(z)
     export
