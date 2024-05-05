@@ -38,6 +38,7 @@ u = st.checkbox("Forecast")
 i = st.checkbox("Wind Speed 💨")
 def main():
     z = st.text_input("city: (please enter country code for places with same name in multiple regions)")
+    st.markdown(z)
     if not z.startswith('a'):
         prompt5(z)
     city()
