@@ -41,12 +41,13 @@ def main():
     if not z.startswith('a'):
         while True:
             try:
-                z == 5
-                st.text(f'mmm no try again{z})
-                return z - 1
-                if z == 0:
-                sys.exit()
-        
+                op == 5
+                st.markdown('mmm no try again')
+                op - 1
+                return op
+                if op == 0:
+                    sys.exit()
+                
     city()
     make_url(z)
     export
