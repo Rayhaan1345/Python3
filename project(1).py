@@ -136,5 +136,4 @@ def export():
 if 'num_tries' not in st.session_state:
     st.session_state['num_tries'] = 3
     
-num_tries = 3
 main()
